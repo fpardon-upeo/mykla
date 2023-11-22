@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Invoice</label>
+    <label>Price List</label>
     <protected>false</protected>
     <values>
         <field>Endpoint__c</field>
-        <value xsi:type="xsd:string">account_move</value>
+        <value xsi:type="xsd:string">product_pricelist</value>
     </values>
     <values>
         <field>Environment__c</field>
-        <value xsi:type="xsd:string">Production</value>
+        <value xsi:type="xsd:string">Sandbox</value>
     </values>
     <values>
         <field>Method__c</field>

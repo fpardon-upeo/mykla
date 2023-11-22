@@ -380,6 +380,7 @@
         <members>Odoo_Endpoint_Config.Sale_Invoice_Grouping</members>
         <members>Odoo_Endpoint_Config.Sales_Order</members>
         <members>Odoo_Endpoint_Config.User</members>
+        <members>Sync_Setting.Invoices_Orders</members>
         <name>CustomMetadata</name>
     </types>
     <types>
@@ -698,7 +699,3 @@
     </types>
     <version>59.0</version>
 </Package>
-
-
-
-
