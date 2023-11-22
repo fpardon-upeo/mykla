@@ -1,0 +1,62 @@
+<!--
+ - Created by Upeo on 18/09/2023.
+ -->
+
+<!-- Loyalty Products -->
+<template>
+    <lightning-card icon-name="standard:reward" title="Add Loyalty Rewards">
+        <div class="slds-m-left_medium slds-m-bottom_medium slds-m-top_medium">
+            <p>Available Points: <span class="slds-text-title_bold">{loyaltyPoints}</span></p>
+        </div>
+        <div>
+            <lightning-spinner if:true={loading}></lightning-spinner>
+        </div>
+        <div if:true={showAllProducts}>
+            <div style="height: 300px;">
+                <lightning-datatable
+                        key-field="id"
+                        data={loyaltyPrograms}
+                        columns={columns}
+                        max-column-width="50px">
+                </lightning-datatable>
+            </div>
+            <div >
+                <lightning-button variant="brand" label="Next" onclick={addLoyaltyPrograms} class="slds-m-around_medium slds-float_right"></lightning-button>
+            </div>
+        </div>
+        <div if:true={showSelectedProducts}>
+            <div>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Point Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={selectedRewards} for:item="reward">
+                            <tr key={reward.Id}>
+                                <td>{reward.Name}</td>
+                                <td>
+                                    <lightning-input variant="label-hidden" type="number" data-index={reward.Index} value={reward.Quantity__c} onchange={handleQuantityChange} data-id={reward.Id}>
+                                    </lightning-input>
+                                </td>
+                                <td>{reward.Point_Cost__c}</td>
+                            </tr>
+                        </template>
+                            <tr>
+                                <td class="slds-text-title_bold">Total</td>
+                                <td></td>
+                                <td style={totalPointsStyling} class="slds-text-title_bold">{totalPoints}</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div >
+                <lightning-button if:true={addLoyaltyProgramsEnabled} enabled={addLoyaltyProgramsEnabled} variant="brand" label="Add" onclick={saveLoyaltyRewards} class="slds-m-around_medium slds-float_right"></lightning-button>
+                <lightning-button if:false={addLoyaltyProgramsEnabled} enabled="false" variant="brand" label="Add" onclick={saveLoyaltyRewards} class="slds-m-around_medium slds-float_right"></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

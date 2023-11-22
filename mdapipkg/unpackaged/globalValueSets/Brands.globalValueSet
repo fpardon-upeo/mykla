@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cent Pur Cent</fullName>
+        <default>false</default>
+        <label>Cent Pur Cent</label>
+    </customValue>
+    <customValue>
+        <fullName>i.am.klean</fullName>
+        <default>false</default>
+        <label>i.am.klean</label>
+    </customValue>
+    <masterLabel>Brands</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

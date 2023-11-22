@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_in_Odoo__c</fullName>
+    <description>Field that checks if there is an Odoo Id to use as page filter</description>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK( Odoo_ID__c ))</formula>
+    <label>Account in Odoo?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

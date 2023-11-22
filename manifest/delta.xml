@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Opportunity.Create_in_Odoo</members>
+        <members>Order.Confirm_Order_in_Odoo</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Opportunity.New_Customer_CPC</members>
+        <members>Opportunity.New_Customer_IAK</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>Opportunity_Send_New_Customer_Email</members>
+        <name>Flow</name>
+    </types>
+    <version>58.0</version>
+</Package>

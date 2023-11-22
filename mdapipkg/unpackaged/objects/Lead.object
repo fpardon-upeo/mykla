@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>Lead_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Company</fields>
+        <fields>MobilePhone</fields>
+        <fields>Email</fields>
+        <fields>Brand_Interest__c</fields>
+        <fields>Phone</fields>
+        <label>Lead Compact Layout</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Ambition_Future_Plans__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Ambition/Future plans</inlineHelpText>
+        <label>Ambition/Future Plans</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Brand_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand Interest</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cent Pur Cent</fullName>
+                    <default>false</default>
+                    <label>Cent Pur Cent</label>
+                </value>
+                <value>
+                    <fullName>i.am.klean</fullName>
+                    <default>false</default>
+                    <label>i.am.klean</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CPC_Scoring__c</fullName>
+        <externalId>false</externalId>
+        <label>CPC Scoring</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>B2B</fullName>
+                    <default>true</default>
+                    <label>B2B</label>
+                </value>
+                <value>
+                    <fullName>B2C</fullName>
+                    <default>false</default>
+                    <label>B2C</label>
+                </value>
+                <value>
+                    <fullName>Divers</fullName>
+                    <default>false</default>
+                    <label>Divers</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Closed_During_Lunchtime__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Closed During Lunchtime</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Closed_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Closed On</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monday</fullName>
+                    <default>false</default>
+                    <label>Monday</label>
+                </value>
+                <value>
+                    <fullName>Tuesday</fullName>
+                    <default>false</default>
+                    <label>Tuesday</label>
+                </value>
+                <value>
+                    <fullName>Wednesday</fullName>
+                    <default>false</default>
+                    <label>Wednesday</label>
+                </value>
+                <value>
+                    <fullName>Thursday</fullName>
+                    <default>false</default>
+                    <label>Thursday</label>
+                </value>
+                <value>
+                    <fullName>Friday</fullName>
+                    <default>false</default>
+                    <label>Friday</label>
+                </value>
+                <value>
+                    <fullName>Saturday</fullName>
+                    <default>false</default>
+                    <label>Saturday</label>
+                </value>
+                <value>
+                    <fullName>Sunday</fullName>
+                    <default>false</default>
+                    <label>Sunday</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Concept_Alignment_with_Brand__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Alignment with the brand&apos;s values, image, and target market</inlineHelpText>
+        <label>Concept: Alignment with Brand</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Concept_Knowledge_of_Ingredients__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Knowledge of ingredients</inlineHelpText>
+        <label>Concept: Knowledge of Ingredients</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Concept_Opportunity_for_All_Lines__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity to sell all product lines by IAK (Makeup &amp; Home)</inlineHelpText>
+        <label>Concept: Opportunity for All Lines</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Concept_Sustainability__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Sustainability initiatives &amp; Eco/Natural brands</inlineHelpText>
+        <label>Concept: Sustainability</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Disqualified_Reason__c</fullName>
+        <description>Why is this lead disqualified?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Why is this lead disqualified?</inlineHelpText>
+        <label>Disqualified Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Existing_Customer_Database__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Existing customer database for newsletters or loyalty program members</inlineHelpText>
+        <label>Existing Customer Database</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Finances_Healthy_Business__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Healthy business</inlineHelpText>
+        <label>Finances: Healthy Business</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>First_Oppty_after_lead__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>First Oppty after lead</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IAK_Pre_Scoring__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Prime_Location_Medium_High_Foot_Traffic__c , 1, 0) +
+IF( Finances_Healthy_Business__c  , 1, 0) +
+IF( Concept_Alignment_with_Brand__c  , 1, 0)+
+IF( Concept_Knowledge_of_Ingredients__c  , 1, 0)+
+IF( Concept_Opportunity_for_All_Lines__c  , 1, 0)+
+IF( Concept_Sustainability__c , 1, 0)+
+IF( Mkt_Sales_Existing_Website_Webshop__c , 1, 0)+
+IF( Mkt_Sales_Opport_Workshops_events__c  , 1, 0)+
+IF( Mkt_Sales_Social_Media_Platforms__c  , 1, 0)+
+IF( MKT_Sales_Staff_Trained_in_Makeup__c  , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IAK Pre Scoring</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Labels__c</fullName>
+        <externalId>false</externalId>
+        <label>Labels</label>
+        <length>250</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Language</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MKT_Sales_Staff_Trained_in_Makeup__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Staff is trained in makeup techniques (application)</inlineHelpText>
+        <label>MKT &amp; Sales: Staff Trained in Makeup</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Min_Order_Quantities_Purchase_Commit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Ability to meet minimum order quantities and honour purchase commitments</inlineHelpText>
+        <label>Min Order Quantities + Purchase Commit</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mkt_Sales_Existing_Website_Webshop__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Existing website &amp; Webshop with proper maintenance</inlineHelpText>
+        <label>Mkt &amp; Sales: Existing Website &amp; Webshop</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mkt_Sales_Opport_Workshops_events__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunities for workshops or events related to the brand</inlineHelpText>
+        <label>Mkt &amp; Sales: Opport. Workshops-events</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mkt_Sales_Social_Media_Platforms__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Online presence and engagement on social media platforms</inlineHelpText>
+        <label>Mkt &amp; Sales: Social Media Platforms</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_Book__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Price Book</label>
+        <referenceTo>Pricebook2</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prime_Location_Medium_High_Foot_Traffic__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Prime Location: Medium-High Foot Traffic</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prospect_is_Data_driven__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Prospect is data-driven. (Knows his/her numbers and works towards goals)</inlineHelpText>
+        <label>Prospect is Data-driven</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ranking__c</fullName>
+        <externalId>false</externalId>
+        <label>Ranking</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Ranking</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ready_for_Conversion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Ready for Conversion</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Remider_Date_for_Nurture_Lead__c</fullName>
+        <externalId>false</externalId>
+        <label>Remider Date for Nurture Lead</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Owner</fullName>
+                    <default>false</default>
+                    <label>Owner</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy</fullName>
+                    <default>false</default>
+                    <label>Pharmacy</label>
+                </value>
+                <value>
+                    <fullName>Titular</fullName>
+                    <default>false</default>
+                    <label>Titular</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy Assistant</fullName>
+                    <default>false</default>
+                    <label>Pharmacy Assistant</label>
+                </value>
+                <value>
+                    <fullName>Purchaser</fullName>
+                    <default>false</default>
+                    <label>Purchaser</label>
+                </value>
+                <value>
+                    <fullName>Beautician</fullName>
+                    <default>false</default>
+                    <label>Beautician</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subchannel__c</fullName>
+        <externalId>false</externalId>
+        <label>Subchannel</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pharma</fullName>
+                    <default>false</default>
+                    <label>Pharma</label>
+                </value>
+                <value>
+                    <fullName>Beauty</fullName>
+                    <default>false</default>
+                    <label>Beauty</label>
+                </value>
+                <value>
+                    <fullName>Divers</fullName>
+                    <default>false</default>
+                    <label>Divers</label>
+                </value>
+                <value>
+                    <fullName>Online</fullName>
+                    <default>false</default>
+                    <label>Online</label>
+                </value>
+                <value>
+                    <fullName>Conceptstore</fullName>
+                    <default>false</default>
+                    <label>Conceptstore</label>
+                </value>
+                <value>
+                    <fullName>Deco &amp; Interiour</fullName>
+                    <default>false</default>
+                    <label>Deco &amp; Interiour</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tax_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>National regime</fullName>
+                    <default>false</default>
+                    <label>National regime</label>
+                </value>
+                <value>
+                    <fullName>Intra-Community Regime</fullName>
+                    <default>false</default>
+                    <label>Intra-Community Regime</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>VAT_Number__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>To be sent to Odoo, make sure this is a valid VAT number, in format BE0123456789</inlineHelpText>
+        <label>VAT Number</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Webshop__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Webshop</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Willing_Training_Staff_Development__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Willingness to receive training or invest in staff development</inlineHelpText>
+        <label>Willing Training + Staff Development</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Willing_to_Learn__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Willingness to learn about ingredients/techniques etc… (Rigorgeous days/Blush)</inlineHelpText>
+        <label>Willing to Learn</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Window_Display_Product_Showcasing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Window display options and opportunities for showcasing the brand&apos;s products</inlineHelpText>
+        <label>Window Display + Product Showcasing</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpenLeads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>Brand_Interest__c</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Qualified</value>
+        </filters>
+        <label>All Open Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Leads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>Brand_Interest__c</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Leads</label>
+    </listViews>
+    <validationRules>
+        <fullName>Disqualify_Reason_Mandatory</fullName>
+        <active>true</active>
+        <description>to make sure a disqualify reason is added when a lead is disqualified</description>
+        <errorConditionFormula>AND(
+TEXT( Status ) = &quot;Disqualified&quot;,
+ISBLANK( Disqualified_Reason__c )
+)</errorConditionFormula>
+        <errorDisplayField>Disqualified_Reason__c</errorDisplayField>
+        <errorMessage>Please add a reason this lead is disqualified</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Inactive_Pricebook</fullName>
+        <active>true</active>
+        <errorConditionFormula>Price_Book__r.IsActive = FALSE</errorConditionFormula>
+        <errorMessage>The selected pricebook is inactive, please select an active one</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Info_complete_before_conversion</fullName>
+        <active>true</active>
+        <errorConditionFormula>IsConverted
+&amp;&amp;
+ Ready_for_Conversion__c =false</errorConditionFormula>
+        <errorMessage>Please fill in all data with the button &apos;Prepare for conversion&apos; before converting</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Label_needed_before_conversion</fullName>
+        <active>true</active>
+        <errorConditionFormula>IsConverted = TRUE
+&amp;&amp;
+ ISBLANK(Labels__c )</errorConditionFormula>
+        <errorMessage>Please add at least one label before converting</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAT_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+NOT(ISBLANK(VAT_Number__c )),
+NOT( REGEX( VAT_Number__c , &quot;[BE]{2}[0-9]{10}&quot;)),
+NOT( REGEX( VAT_Number__c , &quot;[NL]{2}[0-9]{10}&quot;)),
+$Profile.Name &lt;&gt; &apos;Salesforce API Only System Integrations&apos;)</errorConditionFormula>
+        <errorMessage>The VAT format needs to be &quot;BE0477472701&quot;</errorMessage>
+    </validationRules>
+</CustomObject>

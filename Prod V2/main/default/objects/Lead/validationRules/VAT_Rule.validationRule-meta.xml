@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAT_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(VAT_Number__c )),
+NOT( REGEX( VAT_Number__c , &quot;[BE]{2}[0-9]{10}&quot;)),
+NOT( REGEX( VAT_Number__c , &quot;[NL]{2}[0-9]{10}&quot;)),
+$Profile.Name &lt;&gt; &apos;Salesforce API Only System Integrations&apos;)</errorConditionFormula>
+    <errorMessage>The VAT format needs to be &quot;BE0477472701&quot;</errorMessage>
+</ValidationRule>

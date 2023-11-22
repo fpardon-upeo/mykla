@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_is_in_Odoo__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK(Odoo_ID__c ))</formula>
+    <label>Order is in  Odoo</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

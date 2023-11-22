@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Back_Order_Quantity__c</fullName>
+    <description>the backorder quantity of all lines</description>
+    <externalId>false</externalId>
+    <label>Back Order Quantity</label>
+    <summarizedField>OrderItem.Backorder_Quantity__c</summarizedField>
+    <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

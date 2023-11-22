@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Delivery Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bpost Bpack 24h Business BE</fullName>
+                <default>false</default>
+                <label>Bpost Bpack 24h Business BE</label>
+            </value>
+            <value>
+                <fullName>Bpost Bpack 24h Pro B2C</fullName>
+                <default>false</default>
+                <label>Bpost Bpack 24h Pro B2C</label>
+            </value>
+            <value>
+                <fullName>Afhaling door klant</fullName>
+                <default>false</default>
+                <label>Afhaling door klant</label>
+            </value>
+            <value>
+                <fullName>Afhaling door vertegenwoodiger</fullName>
+                <default>false</default>
+                <label>Afhaling door vertegenwoodiger</label>
+            </value>
+            <value>
+                <fullName>Free delivery charges</fullName>
+                <default>false</default>
+                <label>Free delivery charges</label>
+            </value>
+            <value>
+                <fullName>Bpost World Business Nl/GER/FR/LUX</fullName>
+                <default>false</default>
+                <label>Bpost World Business Nl/GER/FR/LUX</label>
+            </value>
+            <value>
+                <fullName>Bpost World Express Pro</fullName>
+                <default>false</default>
+                <label>Bpost World Express Pro</label>
+            </value>
+            <value>
+                <fullName>Verzending</fullName>
+                <default>false</default>
+                <label>Verzending</label>
+            </value>
+            <value>
+                <fullName>Standaard</fullName>
+                <default>false</default>
+                <label>Standaard</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Store Pickup</fullName>
+                <default>false</default>
+                <label>Store Pickup</label>
+            </value>
+            <value>
+                <fullName>Gratis verzending Mykla</fullName>
+                <default>false</default>
+                <label>Gratis verzending Mykla</label>
+            </value>
+            <value>
+                <fullName>Verzendkost CB</fullName>
+                <default>false</default>
+                <label>Verzendkost CB</label>
+            </value>
+            <value>
+                <fullName>Shopify orders Mykla zonder verzending</fullName>
+                <default>false</default>
+                <label>Shopify orders Mykla zonder verzending</label>
+            </value>
+            <value>
+                <fullName>Shipping EU</fullName>
+                <default>false</default>
+                <label>Shipping EU</label>
+            </value>
+            <value>
+                <fullName>Shipping NL</fullName>
+                <default>false</default>
+                <label>Shipping NL</label>
+            </value>
+            <value>
+                <fullName>Gratis verzending CB</fullName>
+                <default>false</default>
+                <label>Gratis verzending CB</label>
+            </value>
+            <value>
+                <fullName>Shipping Luxemburg</fullName>
+                <default>false</default>
+                <label>Shipping Luxemburg</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

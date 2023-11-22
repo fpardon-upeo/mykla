@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Tax Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>National regime</fullName>
+                <default>false</default>
+                <label>National regime</label>
+            </value>
+            <value>
+                <fullName>Intra-Community Regime</fullName>
+                <default>false</default>
+                <label>Intra-Community Regime</label>
+            </value>
+            <value>
+                <fullName>Export</fullName>
+                <default>false</default>
+                <label>Export</label>
+            </value>
+            <value>
+                <fullName>Co-contracting Regime</fullName>
+                <default>false</default>
+                <label>Co-contracting Regime</label>
+            </value>
+            <value>
+                <fullName>Vrijgesteld van BTW</fullName>
+                <default>false</default>
+                <label>Vrijgesteld van BTW</label>
+            </value>
+            <value>
+                <fullName>Intercompany (voor GB-rek)</fullName>
+                <default>false</default>
+                <label>Intercompany (voor GB-rek)</label>
+            </value>
+            <value>
+                <fullName>Eigen company (voor GB rek)</fullName>
+                <default>false</default>
+                <label>Eigen company (voor GB rek)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

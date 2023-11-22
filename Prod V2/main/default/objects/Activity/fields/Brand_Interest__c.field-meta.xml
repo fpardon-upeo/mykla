@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Interest__c</fullName>
+    <externalId>false</externalId>
+    <label>Brand Interest</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cent Pur Cent</fullName>
+                <default>false</default>
+                <label>Cent Pur Cent</label>
+            </value>
+            <value>
+                <fullName>i.am.klean</fullName>
+                <default>false</default>
+                <label>i.am.klean</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

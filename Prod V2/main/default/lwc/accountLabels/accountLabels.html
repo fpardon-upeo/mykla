@@ -1,0 +1,17 @@
+<!--
+ - Created by Upeo on 20/10/2023.
+ -->
+
+<!-- Account Labels -->
+<template>
+    <lightning-card title="Labels" icon-name="utility:labels">
+        <div>
+            <c-searchable-combobox label="Search for a label" placeholder="Search for a label" onselectedvalue={handleAddSelectedValue}></c-searchable-combobox>
+        </div>
+        <div class="slds-m-left_small">
+            <template for:each={accountLabels} for:item="label">
+                <lightning-pill key={label} label={label} onremove={handleRemove} data-label={label} class="slds-m-top_small slds-m-right_x-small"></lightning-pill>
+            </template>
+        </div>
+    </lightning-card>
+</template>

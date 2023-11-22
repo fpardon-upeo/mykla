@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "Prod V2",
+      "default": true
+    }
+  ],
+  "name": "rigo-prod",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "59.0"
+}

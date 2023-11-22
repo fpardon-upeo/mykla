@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Package__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>technical field used in the creation of orders when the opportunity is won</description>
+    <externalId>false</externalId>
+    <label>Opportunity Package</label>
+    <referenceTo>Opportunity_Package__c</referenceTo>
+    <relationshipLabel>Opportunity Product</relationshipLabel>
+    <relationshipName>Opportunity_Product</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

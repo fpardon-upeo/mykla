@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IAK_Packages</fullName>
+    <columns>NAME</columns>
+    <columns>Allowed_Pricelist_Ids__c</columns>
+    <columns>Starter__c</columns>
+    <columns>Year__c</columns>
+    <columns>Active__c</columns>
+    <columns>Date_From__c</columns>
+    <columns>Date_To__c</columns>
+    <columns>Brand__c</columns>
+    <columns>Odoo_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Brand__c</field>
+        <operation>equals</operation>
+        <value>i.am.klean</value>
+    </filters>
+    <label>IAK Packages</label>
+</ListView>

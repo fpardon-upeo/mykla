@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>Order_Compact_Layout</fullName>
+        <fields>Order_Name__c</fields>
+        <fields>AccountId</fields>
+        <fields>EffectiveDate</fields>
+        <fields>Total_Order_Amount__c</fields>
+        <label>Order Compact Layout</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Back_Order_Quantity__c</fullName>
+        <description>the backorder quantity of all lines</description>
+        <externalId>false</externalId>
+        <label>Back Order Quantity</label>
+        <summarizedField>OrderItem.Backorder_Quantity__c</summarizedField>
+        <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Create_Order_Lines__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>to trigger automated creation of Order Lines</description>
+        <externalId>false</externalId>
+        <label>Create Order Lines</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Comes from Odoo</description>
+        <externalId>false</externalId>
+        <label>Invoice ID</label>
+        <referenceTo>Invoice__c</referenceTo>
+        <relationshipLabel>Orders(standard)</relationshipLabel>
+        <relationshipName>Orders_standard</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Invoice To</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders (Invoice To)</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Linked_Revenue_Forecast__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>field that will be automatically added when creating an order to indicate the forecast linked</description>
+        <externalId>false</externalId>
+        <label>Linked Revenue Forecast</label>
+        <referenceTo>Revenue_Forecast__c</referenceTo>
+        <relationshipLabel>Orders(standard)</relationshipLabel>
+        <relationshipName>Orders_standard</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Memo__c</fullName>
+        <externalId>false</externalId>
+        <label>Memo</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(MONTH(EffectiveDate))</formula>
+        <label>Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Odoo_ID__c</fullName>
+        <description>comes from Odoo</description>
+        <externalId>true</externalId>
+        <label>Odoo ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Odoo_Invoice_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Odoo Invoice Id</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Odoo_Order_Nbr__c</fullName>
+        <externalId>false</externalId>
+        <label>Odoo Order Nbr</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>From which Opportunity was this order created</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Odoo_Order_Nbr__c &lt;&gt; &apos;&apos;,
+Odoo_Order_Nbr__c,
+&quot;SFO-&quot;+TEXT(YEAR(EffectiveDate))+&quot;-&quot;+OrderNumber
+)</formula>
+        <label>Order Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>true</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Sent</fullName>
+                    <default>false</default>
+                    <label>Sent</label>
+                </value>
+                <value>
+                    <fullName>Sale</fullName>
+                    <default>false</default>
+                    <label>Sale</label>
+                </value>
+                <value>
+                    <fullName>Cancel</fullName>
+                    <default>false</default>
+                    <label>Cancel</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Order_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Order_is_in_Odoo__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOT(ISBLANK(Odoo_ID__c ))</formula>
+        <label>Order is in  Odoo</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PDF__c</fullName>
+        <externalId>false</externalId>
+        <label>PDF</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Package__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Based on which package was this order created</description>
+        <externalId>false</externalId>
+        <label>Package</label>
+        <referenceTo>Package__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Odoo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checkbox is true - the integrat!on to Odoo has to be triggered</description>
+        <externalId>false</externalId>
+        <label>Sent to Odoo</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Shipping_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Shipping ID</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <description>comes from Odoo</description>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Order_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Order Amount</label>
+        <summarizedField>OrderItem.Line_Total__c</summarizedField>
+        <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Track_Trace__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;https://track.bpost.cloud/btr/web/#/search?itemCode=&apos;+ Tracking_Reference__c+&apos;&amp;lang=en&amp;postalCode=&apos;+ BillingPostalCode, &apos;Tracking Link&apos;)</formula>
+        <label>Track &amp; Trace</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tracking_Reference__c</fullName>
+        <description>comes from Odoo</description>
+        <externalId>false</externalId>
+        <label>Tracking Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Use_Account_Pricebook__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you want to use the account price book for this order? (if left empty, you can choose the pricebook before adding products)</inlineHelpText>
+        <label>Use Account Pricebook</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_is_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>$User.Id   =    OwnerId</formula>
+        <label>User is Owner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Warehouse_ID__c</fullName>
+        <description>comes from Odoo</description>
+        <externalId>false</externalId>
+        <label>Warehouse ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(EffectiveDate))</formula>
+        <label>Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllOrders</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>ORDERS.TOTAL_AMOUNT</columns>
+        <columns>ORDERS.EFFECTIVE_DATE</columns>
+        <columns>Invoice_ID__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>Order_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Orders</label>
+    </listViews>
+</CustomObject>
