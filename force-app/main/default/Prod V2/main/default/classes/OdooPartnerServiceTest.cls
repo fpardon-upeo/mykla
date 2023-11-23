@@ -33,101 +33,103 @@ private class OdooPartnerServiceTest {
     @TestSetup
     static void setup() {
 
+
+
         String json=
                 '{'+
-                        '    "meta": {'+
-                        '        "total": 3,'+
-                        '        "size": 3,'+
-                        '        "limit": 3,'+
-                        '        "offset": 0'+
-                        '    },'+
-                        '    "data": ['+
-                        '        {'+
-                        '            "id": 105040,'+
-                        '            "type": "res_partner",'+
-                        '            "attributes": {'+
-                        '                "name": "𝑩𝒊𝒂𝒏𝒄𝒂. Jellema",'+
-                        '                "parent_odoo": null,'+
-                        '                "street": "Westelijk achterom 11",'+
-                        '                "city": "Tzum",'+
-                        '                "postal_code": "8804 ND",'+
-                        '                "country_iso_code": "NL",'+
-                        '                "description_html": null,'+
-                        '                "email": "biancajellema@outlook.com",'+
-                        '                "mobile": null,'+
-                        '                "phone": "621687731",'+
-                        '                "website": null,'+
-                        '                "language": "nl_BE",'+
-                        '                "pricelist_odoo_id": 666,'+
-                        '                "title": null,'+
-                        '                "vat": null,'+
-                        '                "company_type": "person",'+
-                        '                "type": "invoice",'+
-                        '                "child_ids": ['+
-                        '                    131259'+
-                        '                ],'+
-                        '                "salesforce_identifier": null,'+
-                        '                "ranking": null,'+
-                        '                "labels": [],'+
-                        '                "distribution_channel": null,'+
-                        '                "sub_distribution_channel": null,'+
-                        '                "sales_person": null,'+
-                        '                "fiscal_position": null,'+
-                        '                "loyalty_points": 0,'+
-                        '                "disable_loyalty_points": false,'+
-                        '                "delivery_method": 2,'+
-                        '                "sale_order_on_invoice_line": false,'+
-                        '                "client_support": null,'+
-                        '                "start": null,'+
-                        '                "end": null,'+
-                        '                "active": true,'+
-                        '                "prospect": true'+
-                        '            }'+
-                        '        },'+
-                        '        {'+
-                        '            "id": 22735,'+
-                        '            "type": "res_partner",'+
-                        '            "attributes": {'+
-                        '                "name": "Arristo",'+
-                        '                "parent_odoo": null,'+
-                        '                "street": "Bedrijvenzone Machelen",'+
-                        '                "city": "Machelen",'+
-                        '                "postal_code": "1830",'+
-                        '                "country_iso_code": "BE",'+
-                        '                "description_html": "<p><br></p>",'+
-                        '                "email": "sales@arristo.be",'+
-                        '                "mobile": null,'+
-                        '                "phone": null,'+
-                        '                "website": null,'+
-                        '                "language": "nl_BE",'+
-                        '                "pricelist_odoo_id": 666,'+
-                        '                "title": null,'+
-                        '                "vat": "BE0691733526",'+
-                        '                "company_type": "company",'+
-                        '                "type": "contact",'+
-                        '                "child_ids": [],'+
-                        '                "salesforce_identifier": null,'+
-                        '                "ranking": 32,'+
-                        '                "labels": ['+
-                        '                    1578'+
-                        '                ],'+
-                        '                "distribution_channel": "B2B",'+
-                        '                "sub_distribution_channel": "Divers",'+
-                        '                "sales_person": 2,'+
-                        '                "fiscal_position": 1,'+
-                        '                "loyalty_points": 0,'+
-                        '                "disable_loyalty_points": false,'+
-                        '                "delivery_method": 3,'+
-                        '                "sale_order_on_invoice_line": true,'+
-                        '                "client_support": null,'+
-                        '                "start": null,'+
-                        '                "end": null,'+
-                        '                "active": true,'+
-                        '                "prospect": false'+
-                        '            }'+
-                        '        }'+
-                        '    ]'+
-                        '}';
+                '    "meta": {'+
+                '        "total": 3,'+
+                '        "size": 3,'+
+                '        "limit": 3,'+
+                '        "offset": 0'+
+                '    },'+
+                '    "data": ['+
+                '        {'+
+                '            "id": 105040,'+
+                '            "type": "res_partner",'+
+                '            "attributes": {'+
+                '                "name": "𝑩𝒊𝒂𝒏𝒄𝒂. Jellema",'+
+                '                "parent_odoo": null,'+
+                '                "street": "Westelijk achterom 11",'+
+                '                "city": "Tzum",'+
+                '                "postal_code": "8804 ND",'+
+                '                "country_iso_code": "NL",'+
+                '                "description_html": null,'+
+                '                "email": "biancajellema@outlook.com",'+
+                '                "mobile": null,'+
+                '                "phone": "621687731",'+
+                '                "website": null,'+
+                '                "language": "nl_BE",'+
+                '                "pricelist_odoo_id": 666,'+
+                '                "title": null,'+
+                '                "vat": null,'+
+                '                "company_type": "person",'+
+                '                "type": "invoice",'+
+                '                "child_ids": ['+
+                '                    131259'+
+                '                ],'+
+                '                "salesforce_identifier": null,'+
+                '                "ranking": null,'+
+                '                "labels": [],'+
+                '                "distribution_channel": null,'+
+                '                "sub_distribution_channel": null,'+
+                '                "sales_person": null,'+
+                '                "fiscal_position": null,'+
+                '                "loyalty_points": 0,'+
+                '                "disable_loyalty_points": false,'+
+                '                "delivery_method": 2,'+
+                '                "sale_order_on_invoice_line": false,'+
+                '                "client_support": null,'+
+                '                "start": null,'+
+                '                "end": null,'+
+                '                "active": true,'+
+                '                "prospect": true'+
+                '            }'+
+                '        },'+
+                '        {'+
+                '            "id": 22735,'+
+                '            "type": "res_partner",'+
+                '            "attributes": {'+
+                '                "name": "Arristo",'+
+                '                "parent_odoo": null,'+
+                '                "street": "Bedrijvenzone Machelen",'+
+                '                "city": "Machelen",'+
+                '                "postal_code": "1830",'+
+                '                "country_iso_code": "BE",'+
+                '                "description_html": "<p><br></p>",'+
+                '                "email": "sales@arristo.be",'+
+                '                "mobile": null,'+
+                '                "phone": null,'+
+                '                "website": null,'+
+                '                "language": "nl_BE",'+
+                '                "pricelist_odoo_id": 666,'+
+                '                "title": null,'+
+                '                "vat": "BE0691733526",'+
+                '                "company_type": "company",'+
+                '                "type": "contact",'+
+                '                "child_ids": [],'+
+                '                "salesforce_identifier": null,'+
+                '                "ranking": 32,'+
+                '                "labels": ['+
+                '                    1578'+
+                '                ],'+
+                '                "distribution_channel": "B2B",'+
+                '                "sub_distribution_channel": "Divers",'+
+                '                "sales_person": 2,'+
+                '                "fiscal_position": 1,'+
+                '                "loyalty_points": 0,'+
+                '                "disable_loyalty_points": false,'+
+                '                "delivery_method": 3,'+
+                '                "sale_order_on_invoice_line": true,'+
+                '                "client_support": null,'+
+                '                "start": null,'+
+                '                "end": null,'+
+                '                "active": true,'+
+                '                "prospect": false'+
+                '            }'+
+                '        }'+
+                '    ]'+
+                '}';
 
         String postJSON=		'{'+
                 '    "data": {'+
@@ -315,7 +317,7 @@ private class OdooPartnerServiceTest {
 
         Test.startTest();
         AsyncOptions asyncOptions = new AsyncOptions();
-        System.enqueueJob(new OdooPartnerSyncQueueable(0, isSandbox, environment, 'company'), asyncOptions);
+        System.enqueueJob(new OdooPartnerSyncQueueable(0, false, environment, 'company'), asyncOptions);
         Test.stopTest();
 
         Account a = [SELECT FIELDS(STANDARD), Odoo_ID__c, Channel__c, Subchannel__c, Website__c, Email__c, Mobile_Phone__c, Language__c, Tax_Status__c, Start__c, End__c, Active_Customer__c, VAT_Number__c, Price_Book__c, Delivery_Method__c, Shipping_Ranking__c, Invoicing_Criteria__c, Delivery_Address__c FROM Account LIMIT 1];
@@ -341,7 +343,7 @@ private class OdooPartnerServiceTest {
 
         Test.startTest();
         AsyncOptions asyncOptions = new AsyncOptions();
-        System.enqueueJob(new OdooPartnerSyncQueueable(0, isSandbox, environment, 'company'), asyncOptions);
+        System.enqueueJob(new OdooPartnerSyncQueueable(0, false, environment, 'company'), asyncOptions);
         Test.stopTest();
 
         Account a = [SELECT FIELDS(STANDARD), Odoo_ID__c, Channel__c, Subchannel__c, Website__c, Email__c, Mobile_Phone__c, Language__c, Tax_Status__c, Start__c, End__c, Active_Customer__c, VAT_Number__c, Price_Book__c, Delivery_Method__c, Shipping_Ranking__c, Invoicing_Criteria__c, Delivery_Address__c FROM Account LIMIT 1];
@@ -371,7 +373,7 @@ private class OdooPartnerServiceTest {
 
         Test.startTest();
         AsyncOptions asyncOptions = new AsyncOptions();
-        System.enqueueJob(new OdooPartnerSyncQueueable(0, isSandbox, environment, 'company'), asyncOptions);
+        System.enqueueJob(new OdooPartnerSyncQueueable(0, false, environment, 'company'), asyncOptions);
         Test.stopTest();
 
         Account a = [SELECT FIELDS(STANDARD), Odoo_ID__c, Channel__c, Subchannel__c, Website__c, Email__c, Mobile_Phone__c, Language__c, Tax_Status__c, Start__c, End__c, Active_Customer__c, VAT_Number__c, Price_Book__c, Delivery_Method__c, Shipping_Ranking__c, Invoicing_Criteria__c, Delivery_Address__c FROM Account LIMIT 1];
@@ -402,7 +404,7 @@ private class OdooPartnerServiceTest {
 
         Test.startTest();
         AsyncOptions asyncOptions = new AsyncOptions();
-        System.enqueueJob(new OdooPartnerSyncQueueable(0, isSandbox, environment, 'person'), asyncOptions);
+        System.enqueueJob(new OdooPartnerSyncQueueable(0, false, environment, 'person'), asyncOptions);
         Test.stopTest();
 
 
@@ -431,7 +433,7 @@ private class OdooPartnerServiceTest {
 
         Test.startTest();
         AsyncOptions asyncOptions = new AsyncOptions();
-        System.enqueueJob(new OdooPartnerSyncQueueable(0, isSandbox, environment, 'person'), asyncOptions);
+        System.enqueueJob(new OdooPartnerSyncQueueable(0, false, environment, 'person'), asyncOptions);
         Test.stopTest();
 
 
